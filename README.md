@@ -33,13 +33,13 @@ Version finale du projet finale du cours LINFO1212 "Projet d'approfondissement e
 
 + Generer la base de donnée dans le fichier ./DB (Ou autre part si vous préférez).
 ```
-    >\>mongod --dbpath *PATH*\PF_vf_PF11\Projet_Final\DB
+    >mongod --dbpath *PATH*\PF_vf_PF11\Projet_Final\DB
 ```
 
 + Importer les différentes saves dans la base de donnée (Pas obligatoire)
 ```
-    >\>mongoimport -d siteDb -c account *PATH*\PF_vf_PF11\Projet_Final\DB_Init\account.json
-    >\>mongoimport -d siteDb -c animals *PATH*\PF_vf_PF11\Projet_Final\DB_Init\animals.json
+    >mongoimport -d siteDb -c account *PATH*\PF_vf_PF11\Projet_Final\DB_Init\account.json
+    >mongoimport -d siteDb -c animals *PATH*\PF_vf_PF11\Projet_Final\DB_Init\animals.json
 ```
 
 + Si vous voulez vérifier que l'importation a bien été effectuer vous pouvez faire
@@ -51,7 +51,7 @@ Version finale du projet finale du cours LINFO1212 "Projet d'approfondissement e
 
 + Si vous voulez supprimer les composant d une collection
 ```
-    >mongosh\> db.account.deleteMany({})
+    >mongosh > db.account.deleteMany({})
 ```
 
 + Si vous voulez modifier l'adresse mail de réception des rendez-vous pour le vétérinaire vous pouvez modifier la variable <veterinarian_mail> dans le fichier /app.js ligne 24
