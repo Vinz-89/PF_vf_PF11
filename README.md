@@ -54,7 +54,7 @@ Version finale du projet finale du cours LINFO1212 "Projet d'approfondissement e
     >mongosh > db.account.deleteMany({})
 ```
 
-+ Si vous voulez modifier l'adresse mail de réception des rendez-vous pour le vétérinaire vous pouvez modifier la variable <veterinarian_mail> dans le fichier /app.js ligne 24
++ Si vous voulez modifier l'adresse mail de réception des rendez-vous pour le vétérinaire vous pouvez modifier la variable `veterinarian_mail` dans le fichier /app.js ligne 24
 
 + Pour lancer les tests faite
 ```
