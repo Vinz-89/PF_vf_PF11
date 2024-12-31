@@ -52,4 +52,4 @@ Version finale du projet finale du cours LINFO1212 "Projet d'approfondissement e
     >>npm test
 
 + Enfin pour lancer le site faite
-    >node .\app.js
+    \>node .\app.js
