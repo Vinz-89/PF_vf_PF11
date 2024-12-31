@@ -39,9 +39,11 @@ Version finale du projet finale du cours LINFO1212 "Projet d'approfondissement e
     >\>mongoimport -d siteDb -c animals *PATH*\PF_vf_PF11\Projet_Final\DB_Init\animals.json
 
 + Si vous voulez vérifier que l'importation a bien été effectuer vous pouvez faire
->\>mongoshsss
->\>mongosh\> use siteDb
->\>mongosh\> db.account.find()
+```
+    >\>mongosh
+    >\>mongosh\> use siteDb
+    >\>mongosh\> db.account.find()
+```
 
 + Si vous voulez supprimer les composant d une collection
     >\>mongosh\> db.account.deleteMany({})
