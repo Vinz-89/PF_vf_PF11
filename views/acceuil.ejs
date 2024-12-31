@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Acceuil</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+     <header>
+      <form class='link-id'><i><a href="/ident.html" class="id-button" method="get">S'identifier...</a></i></form>
+      <img src="photos/UCL.png" width="250" height="50" alt="UCL Logo">
+      <h1 class="title">Check-Incident</h1>
+      <form class="research-bar">
+        <input type="search" name="search" placeholder="Rechercher...">
+        <button type="submit">Rechercher</button>
+      </form>
+      <p> <%= date %> </p>
+    </header>
+    <section>
+        <p>
+      <div>
+          <nav>
+            <i><a href="/incident.html" class="incident-button" method="get">Ajouter un incident</a></i>
+            <form class="date">
+              <label>Date :</label>
+              <input type="date">
+            </form>
+          </nav>
+      </div>
+        </p>
+    </section>
+    <section>
+      <table class="table-container">
+        <caption class="page-title">Incidents signalés :</caption>
+        <tr>
+          <th scope="col">Déscription</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Rapporté par</th>
+          <th scope="col">Date</th>
+        </tr>
+        <% incidents.forEach(function(incident) { %>
+          <tr>
+            <td><%= incident.description %></td>
+            <td><%= incident.addresse %></td>
+            <td><%= incident.username %></td>
+            <td><%= incident.date %></td>
+          </tr>
+        <% }); %>
+      </table>
+      
+    </section>
+  </body>
+</html>
+
+
+
+          

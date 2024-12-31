@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Year</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <form class='link-id'><i><%= username %></a></i></form>
+      <img src="photos/UCL.png" width="250" height="50" alt="UCL Logo">
+      <h1 class="title">Check-Incident</h1>
+      <form class="research-bar">
+        <input type="search" placeholder="Rechercher...">
+        <button type="submit">Rechercher</button>
+      </form>
+      <p> <%= date %> </p>
+    </header>
+
+    <h1>An incident was entered for user "<%= username %>"</h1>
+    <p>
+      <%= description %>
+    </p>
+  </body>
+</html>
