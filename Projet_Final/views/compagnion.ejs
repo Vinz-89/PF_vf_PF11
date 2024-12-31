@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Compagnion</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="base" id="base">
+            <nav class="barrenav">
+                <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+                <ul class="barrelien">      
+                        <li><a href="acceuil" method="get">acceuil</a></li>
+                        <li><a href="rdv" method="get">rendez-vous</a></li>   
+                        <% if (session.username) { %>
+                            <li><a href="/logout" class="logout-button">Déconnexion</a></li>
+                        <% } %>  
+                </ul>
+            </nav>
+            <div class="profile-compagnion-name" id="user_name">
+                <img src="/photos/Dog_Cat.jpg" alt="flo_chat1" class="image_arondie">
+                <h1><%= compagnion.name %></h1>
+            </div>
+            <div class="profile-compagnion-base" id="user_name">
+                </p><h2>Informations: </h2>
+                <div class="profile-compagnion-information" id="user_name">
+                    <h4>Espèce: <%= compagnion.species %></h4>
+                    <h4>Race: <%= compagnion.breed%> </h4>
+                    <h4>Age: <%= compagnion.age%> </h4>
+                    <h4>Sexe: <%= compagnion.gender%> </h4>
+                    <h4>Propriétaire: <%= compagnion.owner%> </h4>
+                </div>
+            </div>  
+            <div class="profile-compagnion-button-container">
+                <form action="/rdv" method="POST">
+                    <input type="hidden" name="selectedAnimalId" value="<%= index %>">
+                    <button type="submit" class="button-ajouter">Prendre rendez-vous</button>
+                </form>
+                
+                <!-- Formulaire pour supprimer un compagnon -->
+                <form action="/delete_compagnion-<%= index %>" method="POST">
+                    <button type="submit" class="button-ajouter">Supprimer</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <ul class="footer">      
+              <li><a href="#header">Acceuil</a></li>
+              <li><a href="#propos">À Propos</a></li>  
+              <li><a href="#service_prop">Services Proposés</a></li>  
+            </ul>
+            <p>Droits d'auteur © 2024 Tous droits réservés - Dr Florence Didier - Médecin Vétérinaire</p>
+          </footer>
+        </div>
+    </body>
+</html>

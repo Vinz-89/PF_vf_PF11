@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Identification</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav class="barrenav">
+            <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+            <ul class="barrelien">      
+                    <li><a href="acceuil" method="get">acceuil</a></li>
+                    <li><a href="rdv" method="get">rendez-vous</a></li>     
+            </ul>
+        </nav>
+        <header>
+          <div class="filtrenoir"></div>
+            <h1>Créer un compte</h1>
+            <h3>Créez un compte en toute sécurité</h3>
+            <div class="rectangle" id="brun"></div>
+        </header>
+
+        <div class="ID_block_position">
+            <div class="ID_block">
+
+                <!-- Affichage du message d'erreur -->
+                <% if (typeof errorMessage !== 'undefined') { %>
+                    <div class="error-message" style="color: red; font-size: 14px; margin-bottom: 10px;">
+                        <%= errorMessage %>
+                    </div>
+                <% } %>
+
+                <form action="create_account" method="post">
+                <div class="ID_title" id="create_title">
+                    <span>Créer un compte</span>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="name" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Nom complet</label>
+                    <i class="fa fa-id-badge icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="email" id="user" class="input_line" 
+                           required 
+                           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                           title="Veuillez entrer une adresse e-mail valide (ex: exemple@domaine.com)">
+                    <label for="user" class="name_line">Adresse email</label>
+                    <i class="fa-regular fa-envelope icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="user" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Nom d'utilisateur</label>
+                    <i class="fa-regular fa-user icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="password" name="mdp" id="pass" class="input_line" required>
+                    <label for="pass" class="name_line">Mot de passe</label>
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
+
+                <div class="remember">
+                    <div class="input_block">
+                        <input type="submit" class="submit_button" value="Créer un compte">
+                    </div>
+                </div>
+                
+                <div class="sign">
+                    <span>Déjà un compte ? <a class="little_button" href="connexion">Se connecter</a></span>
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

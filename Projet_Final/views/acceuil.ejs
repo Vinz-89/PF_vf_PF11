@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Identification</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+<body>
+    <nav class="barrenav">
+        <img src="/photos/logo_site.png" alt="logo"id="barrelogo">
+        <ul class="barrelien">      
+          <li><a href="rdv" class="rdv-button" method="get">rendez-vous</a></li>
+          <% if (session.username) { %>
+            <li><a href="profile" class="connexion-button" method="get">profil</a></li>    
+          <% } else { %>
+            <li><a href="connexion" class="connexion-button" method="get">connexion</a></li>    
+          <% } %> 
+          <% if (session.username) { %>
+            <li><a href="/logout" class="logout-button">Déconnexion</a></li>
+          <% } %>  
+        </ul>
+    </nav>
+    <header id="header">
+      <div class="filtrenoir"></div>
+        <h1>Dr Florence Didier</h1> 
+        <h1>Médecin Vétérinaire agréée</h1>
+        <div class="rectangle" id="brun"></div>
+        <h3>Visites à domicile sur rendez-vous</h3>
+        <h3>0479 17 14 04</h3>
+    </header>
+
+    <section>
+
+      <div class="propos" id="propos">
+        <div class="photo_rond">
+        <img src="/photos/veto_chien.jpg" alt="Photo de la Vétérinaire"  id="chien_veto">
+        </div>
+        <h1>À propos</h1>
+        <div class="rectangle" id="brun2"></div>
+        <p>Après 4 ans de pratique en cliniques d'urgence et cabinets de médecine générale, c'est avec passion et détermination que je vous propose mes services à domicile.</p>
+        <p>Ma mission est de prodiguer les meilleurs soins à vos compagnons à quatres pattes tout en vous proposant une médecine préventive de qualité, tout cela à votre domicile. Cela permet de limiter le stress lié au transport et à l'attente en cabinet. Je me déplace dans un rayon assez large autour de Braine l'Alleud.</p>
+        <p>N'hésitez pas à me contacter au 0479 17 14 04 pour prendre rendez-vous, ou pour de plus amples renseignements.</p>
+      </div>
+
+
+
+      <div class="service_propose"id="service_prop">
+
+        <h1>Services proposés</h1>
+        <div class="rectangle" id="brun2"></div>
+
+        <div class="services">
+
+        <a href="rdv"class="photo_description">
+          <img src="/photos/flo_chat1.jpeg" alt="flo_chat1"class="image_ronde">
+          <h2>Consultation générale</h2>
+          <p>Examen clinique & traitements de maladies diverses et variées</p>
+        </a>
+                 
+        <a href="rdv"class="photo_description">
+          <img src="/photos/vaccin.JPG" alt="flo_chat1"class="image_ronde" id="vaccin_photo">
+          <h2>Vaccins</h2>
+          <p>CHAT : typhus, coryza, leucose & rage</p>
+          <p>CHIEN : maladie de carré, hépatite, parvovirose, leptospirose, toux du chenil & rage</p>
+          <p>Vermifuges et anti-puces au choix</p>
+        </a>
+          
+        <a href="rdv"class="photo_description">
+          <img src="/photos/id_elec.png" alt="flo_chat1"class="image_ronde"id="id_elec">
+          <h2>Identification par puce électronique</h2>
+          <p>Passeport, pose de la puce et enregistrement</p>
+        </a>
+
+        <a href="rdv"class="photo_description">
+          <img src="/photos/suture_bw1.JPG" alt="flo_chat1"class="image_ronde">
+          <h2>Sutures, soins de plaie & bandages</h2> 
+        </a>
+                 
+        <a href="rdv"class="photo_description">
+          <img src="/photos/exam_complet.png" alt="flo_chat1"class="image_ronde">
+          <h2>Examens complémentaires</h2>
+          <p>Prise de sang, analyse urinaire, ...</p>
+          <p>Les radiographies et examens plus spécifiques se font dans un cabinet situé à Waterloo (transport de l'animal possible)</p>
+        </a>
+        
+        <a href="rdv"class="photo_description">
+          <img src="/photos/fin_de_vie.png " alt="flo_chat1"class="image_ronde">
+          <h2>Fin de vie</h2>
+          <p>Euthanasie</p>
+          <p>Incinération collective ou individuelle sur demande</p>
+        </a>
+        
+        <a href="rdv"class="photo_description">
+          <img src="/photos/chirurgies.png" alt="flo_chat1"class="image_ronde">
+          <h2>Chirurgies</h2>
+          <p>Toutes les chirurgies se font dans un cabinet situé à Waterloo, sous anesthésie gazeuse avec monitoring (transport de l'animal possible)</p>
+        </a>
+
+      </div>
+      <footer>
+        <ul class="footer">      
+          <li><a href="#header">Acceuil</a></li>
+          <li><a href="#propos">À Propos</a></li>  
+          <li><a href="#service_prop">Services Proposés</a></li>  
+        </ul>
+        <p>Droits d'auteur © 2024 Tous droits réservés - Dr Florence Didier - Médecin Vétérinaire</p>
+      </footer>
+      </div>
+    </section>
+</body>

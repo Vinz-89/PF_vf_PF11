@@ -1,0 +1,681 @@
+/*Set up des couleurs pour les réutiliser*/
+:root {
+    --second-color: #b9b9b9;
+    --primari-color: #b5afaf;
+    --black-color: #020101;
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.barrenav{
+    background-color: #1b262c;
+    position:sticky;
+    width: 100%;
+    top: 0px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px -1px rgb(0, 0, 0.1);
+    z-index: 1000;
+ 
+    
+}
+.barrelien{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap:20px;
+    padding-right: 30px;
+    margin:0;
+    
+}
+.barrelien a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration-line: none;
+    color: #bebcb8;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+
+}
+.barrelien a:hover{
+    color:#ece6c2;
+    
+}
+#barrelogo{
+    height:100%;
+    margin-left:10px;
+    width:auto;
+}
+
+header{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-image:url(photos/IMG_0333.jpeg) ;
+    background-repeat: no-repeat;
+    background-position-y: -60vh;
+    background-size:cover;
+    height: 67vh;
+    overflow: hidden;
+}
+.filtrenoir{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 1;
+}
+header h1{
+    color: white;
+    font-family: "Neuton", serif;
+    font-weight: 400;
+    font-size: 55px;
+    text-align: center;
+    z-index:2;
+
+    animation: fadeIn 2s ease-in-out;
+}
+header h3{
+    color: white;
+    text-align: center;
+    font-family: "Neuton", serif;
+    font-weight: 300;
+    font-size: 2.3rem;
+    z-index:2;
+}
+.rectangle{
+    position: relative;
+    border: 2px transparent;
+    width:5% ;
+    height:1% ;
+    z-index:2;
+}
+ #brun{
+    background-color: #786048;
+    margin:1%;
+}
+.propos{
+    position: relative;
+    display: block;
+    height: 67vh;
+    background-color: #ebe5df;
+    padding-top:15vh;
+    padding-left: 15vh;
+    padding-right: 25vh;
+    
+}
+.propos h1{
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 400;
+    font-size: 450%;
+    font-style: bold;
+    padding-bottom: 20px;
+}
+.propos p{
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 300;
+    font-size:150%;
+    font-style: bold;
+    padding-bottom: 20px;
+}
+.photo_rond{
+    position: relative;
+    border-radius: 50%;
+    height: 400px ;
+    width: 400px;
+    overflow: hidden;
+    float: left;
+    bottom: 20%;
+    margin-right: 6%;;
+    margin-top: 5%;
+    
+}
+#chien_veto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.4);
+    object-position: 50% 30%;
+}
+a{
+    text-decoration: none;
+}
+
+#brun2{
+    background-color: #786048;
+    margin-left:32%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width:7.5% ;
+    height:1.3% ;
+}
+.service_propose{
+    width: 100%;
+    background-color: #f9f9f9;
+}
+.service_propose h1{
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 360;
+    font-size: 230%;
+    font-style: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+.services{
+    display: flex;
+    border: 10px transparent black;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding:40px 90px 0 80px;
+    
+}
+.photo_description{
+    text-decoration: none;
+    color: black;
+    height:25rem;
+    width: 25rem;
+    border: 2px transparent black;
+    text-align: center;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.photo_description h2{
+    font-family: inherit, serif;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 10px;
+}
+.photo_description p{
+    font-family: inherit, serif;
+    font-weight: normal;   
+}
+.photo_description:hover{
+    background-color: white;
+}
+
+.image_ronde{
+    
+    border-radius: 50%;
+    height: 135px ;
+    width: 135px;
+    overflow: hidden;
+    margin:20px;
+    object-fit: cover;
+    
+}
+#vaccin_photo{  
+    object-position: 50% 53%; 
+}
+footer{
+    background-color:#ebe5df;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-items:center;
+    justify-content: center;
+}
+.footer a{
+    color: black;
+    text-decoration: none;
+    font-size: 75%;
+}
+.footer a:hover{
+    color: gray;
+}
+footer p{
+    padding: 20px;
+    font-size: 75%;
+}
+
+
+/* RINIM -- CSS */
+/* Toutes les classes de "rendez-vous.html" */
+.RDV_body{
+    background-color: #ebe5df;
+    width: 100%;
+}
+
+.RDV_body h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Neuton", serif;
+    font-weight: 360;
+    font-size: 230%;
+    font-style: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.texte_info{
+    position: relative;
+    bottom: 4vh;
+    flex-direction: column;
+    border:transparent 2px black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    width: 30%;
+}
+.texte_info li{
+    padding: 0.7%;
+}
+
+.texte_info a{
+    color: #886c54;
+}
+.texte_info a:visited{
+    color: #886c54;
+}
+.texte_info a:hover{
+    text-decoration: underline;
+}
+
+.donnee{
+    position: relative;
+    top: 3vh;
+    display: flex;
+    border:transparent 2px white;
+    flex-direction: column;
+    width: 40%;
+}
+
+.donnee input, 
+.donnee select, 
+.donnee textarea {
+    width: 100%;
+    padding: 10px;
+    border:1px solid #cccccc;
+    border-radius:5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.donnee textarea {
+    height: 100px;
+}
+.donnee button {
+    background-color: #886c54;
+    color: #cccccc;
+    padding: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    border: #cccccc;
+}
+.donnee label{
+    padding: 1%;
+    font-size: 120%;
+}
+
+.donnee button:hover {
+    background-color:#9d8168;
+}
+#rdv{
+    background-color:#f9f9f9 ;
+}
+
+.boxage{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 4%;
+    gap:15%;
+    border:transparent 2px gray;
+    margin-right: 18%;
+}
+
+.notification{
+    color: #c9302c;
+    text-decoration: underline;
+}
+
+
+/* Toutes les classes de "identification.html" et "connexion.html" */
+.ID_block_position {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.ID_block{
+    position: relative;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    width: 450px;
+    border: 2px solid var(--primary-color);
+    padding: 7.5rem 2.5em 4em 2.5em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.ID_title{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primari-color);
+    border-radius: 0 0 20px 20px;
+}
+.ID_title span {
+    color: var(--black-color);
+    font-size: 25px;
+}
+#create_title {
+    width: 220px;
+}
+#login_title {
+    width: 170px;
+}
+.input_block {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    margin: 20px 0;
+}
+.input_line {
+    width: 100%;
+    font-size: 20px;
+    height: 55px;
+    color: var(--black-color);
+    background: transparent;
+    padding-inline: 20px 54px;
+    border-radius: 30px;
+    border: 2px solid var(--primari-color);
+    outline: none;
+}
+
+#user {
+    margin-bottom: 10px;
+}
+.name_line {
+    position: absolute;
+    transition: 0.2s;
+    top: 15px;
+    left: 20px;
+}
+.input_line:focus +.name_line,
+.input_line:valid +.name_line {
+    position: absolute;
+    font-size: 14px;
+    top: -10px;
+    left: 20px;
+    background-color: var(--primari-color);
+    color: var(--black-color);
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.icon {
+    position: absolute;
+    font-size: 20px;
+    top: 18px;
+    right: 25px;
+}
+.rememeber {
+    justify-content: spac-between;
+    display: flex;
+    font-size: 15px;
+}
+.submit_button {
+    background: #e4f1e9a4;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.submit_button:hover {
+    background: var(--second-color);
+    transform: scale(1.05);
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.little_button {
+    color: #963a3a;
+    text-decoration: none;
+}
+.little_button:hover{
+    text-decoration: underline;
+}
+.sign {
+    text-align: center;
+}
+.sign a {
+    font-weight: 500;
+}
+a:focus, button:focus {
+    outline: 3px solid #ece6c2; /* ou une couleur proche de ton design */
+}
+@media only screen and (max-width: 564px){
+    .ID_block_position{
+        padding: 20px;
+    }
+
+    .ID_block{
+        padding: 7.5em 1.5em 4em 1.5em;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Profile */
+
+.base{
+    background-color: #cccccc;
+    min-height: 810px;
+
+}
+
+/* Profile Name */
+.profile-user-name{
+    padding: 72px 100px;
+    margin: 0px auto;
+    height: 120px;
+    align-items: center;
+    display: flex;
+}
+.image_arondie{
+    border-radius: 20%;
+    height: 100px ;
+    width: 100px;
+    overflow: hidden;
+    margin:20px;
+    object-fit: cover;
+    float: left;
+}
+
+/* Profile Information */
+.profile-user-informatison{
+    padding: 10px 100px;
+    margin: 0px auto;
+    height: 100px;
+    align-items: center;
+    display: flex;
+}
+.profile-user-information{
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between; /* Place un élément à gauche et l'autre à droite */
+    align-items: center; /* Centre verticalement les textes */
+    height: 100px;
+}
+.left-text, .right-text {
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+
+/* Profile_Compagnion */
+.profile-user-compagnie{
+    padding: 10px 100px;
+    margin: 0px auto;
+    /* min-height: 1000px; */
+
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.profile-user-compagnie-button-grid {
+    margin: 0px auto;
+    height: auto;
+    align-items: center;
+}
+
+
+/* border-radius: 20%;
+height: 100px ;
+width: 100px;
+overflow: hidden;
+margin:20px;
+object-fit: cover;
+float: left; */
+.button-item {
+    display: inline-flex;
+    align-items: center; /* Centre l'image et le texte verticalement */
+    justify-content: flex-start;
+    background-color: #ffffff00; /* Couleur de fond du bouton */
+    border: 1px solid #ccc; /* Bordure des boutons */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espace intérieur */
+    cursor: pointer;
+    text-align: left; /* Aligne le texte à gauche */
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.button-item:hover {
+    background-color: #e0e0e0; /* Change la couleur au survol */
+}
+.button-icon {
+    width: 50px; /* Largeur de l'image */
+    height: 50px; /* Hauteur de l'image */
+    border-radius: 15%;
+    object-fit: cover; /* Ajuste l'image sans déformer */
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+.button-text {
+    font-size: 16px; /* Taille du texte */
+    color: #333; /* Couleur du texte */
+    flex: 1; /* Permet au texte de prendre tout l'espace disponible */
+}
+
+
+.button-ajouter-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+.button-ajouter {
+    display: flex;
+    align-items: center; /* Centre l'image et le texte verticalement */
+    background-color: #afafaf; /* Couleur de fond du bouton */
+    border: 1px solid #ccc; /* Bordure des boutons */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espace intérieur */
+    cursor: pointer;
+    text-align: center; /* Aligne le texte à gauche */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Profile du Compagnion */
+.profile-compagnion-name{
+    padding: 72px 100px;
+    margin: 0px auto;
+    height: 120px;
+    align-items: center;
+    display: flex;
+}
+
+.profile-compagnion-information {
+    margin-top: 20px; /* Ajoute un espace en dessous du premier texte */
+    line-height: 28px;
+}
+.profile-compagnion-base{
+    padding: 10px 100px;
+    margin: 0px auto;
+    height: auto;
+
+    align-items: center;
+}
+.profile-compagnion-button-container {
+    display: flex;
+    justify-content: space-evenly; /* Répartit l'espace uniformément */
+    align-items: center; /* Centre verticalement si nécessaire */
+    width: 100%; /* Utilise toute la largeur de la page */
+    margin: 0px auto;
+    height: auto; /* Optionnel : définit une hauteur */
+}
+  
+.button-ajouter {
+    display: flex;
+    align-items: center; /* Centre l'image et le texte verticalement */
+    border: 1px solid #ccc; /* Bordure des boutons */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espace intérieur */
+    margin: 10px 10px;
+    cursor: pointer;
+    text-align: center; /* Aligne le texte à gauche */
+    transition: background-color 0.3s ease;
+}
+
+.logout-button {
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}

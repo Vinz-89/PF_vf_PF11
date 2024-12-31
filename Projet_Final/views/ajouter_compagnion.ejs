@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Identification</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav class="barrenav">
+            <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+            <ul class="barrelien">
+                    <li><a href="acceuil">acceuil</a></li>
+                    <li><a href="rdv">rendez-vous</a></li>
+                    <% if (session.username) { %>
+                        <li><a href="/logout" class="logout-button">Déconnexion</a></li>
+                    <% } %>
+            </ul>
+        </nav>
+        <header>
+          <div class="filtrenoir"></div>
+            <h1>Ajouter un animal</h1>
+            <h3>Ajout d'animal au profil "user"</h3>
+            <div class="rectangle" id="brun"></div>
+        </header>
+
+        <div class="ID_block_position">
+            <div class="ID_block">
+                <form action="profile_ajout_compagnion" method="post">
+                <div class="ID_title" id="create_title">
+                    <span>Ajouter un animal</span>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="name" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Nom</label>
+                    <i class="fa fa-id-badge icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="species" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Espèce</label>
+                    <i class="fa fa-tags icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="breed" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Race</label>
+                    <i class="fa fa-info-circle icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="number" name="Age" id="age" class="input_line" required>
+                    <label for="age" class="name_line">Âge</label>
+                    <i class="fa fa-calendar icon"></i>
+                </div>
+
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" id="homme" name="gender" value="H" required>
+                        M (Mâle)
+                    </label>
+                    <label>
+                        <input type="radio" id="femme" name="gender" value="F" required>
+                        F (Femelle)
+                    </label>
+                </div>
+                <div class="remember">
+                    <div class="input_block">
+                        <input type="submit" class="submit_button" value="Ajouter l'animal">
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Identification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav class="barrenav">
+        <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+        <ul class="barrelien">      
+                <li><a href="acceuil.html">acceuil</a></li>
+                <% if (session.username) { %>
+                    <li><a href="profile" class="connexion-button" method="get">profil</a></li>    
+                  <% } else { %>
+                    <li><a href="connexion" class="connexion-button" method="get">connexion</a></li>    
+                  <% } %> 
+                <% if (session.username) { %>
+                    <li><a href="/logout" class="logout-button">Déconnexion</a></li>
+                <% } %>    
+        </ul>
+    </nav>
+    <header>
+      <div class="filtrenoir"></div>
+        <h1>Prendre un Rendez-vous</h1>
+        <h3>Choisissez le type de rendez-vous et remplissez vos informations</h3>
+        <div class="rectangle" id="brun"></div>
+    </header>
+
+    <section class="RDV_body">
+        <div class="RDV-block">
+            <h1>Formulaire de Rendez-vous</h1>
+            <div class="rectangle" id="brun2"></div>
+            <form action="#" method="post">
+
+                <label for="phone-number">Numéro de téléphone :</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="+32 *** ** ** **" required>
+
+                <label for="type-rdv">Type de rendez-vous :</label>
+                <select id="type-rdv" name="type-rdv" required>
+                    <option value="urgent">Rendez-vous urgent</option>
+                    <option value="rapide">Rendez-vous rapide</option>
+                    <option value="non-urgent">Rendez-vous non urgent</option>
+                </select>
+
+                <label for="déscription">Message ou Informations supplémentaires :</label>
+                <textarea id="déscription" name="déscription" placeholder="Entrez les informations supplémentaires ici..." rows="4"></textarea>
+
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

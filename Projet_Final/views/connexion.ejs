@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Connexion</title>
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav class="barrenav">
+            <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+            <ul class="barrelien">      
+                    <li><a href="acceuil" method="get">acceuil</a></li>
+                    <li><a href="rdv" method="get">rendez-vous</a></li>     
+            </ul>
+        </nav>
+        <header>
+          <div class="filtrenoir"></div>
+            <h1>Connexion</h1>
+            <h3>Accédez à votre compte en toute sécurité</h3>
+            <div class="rectangle" id="brun"></div>
+        </header>
+
+        <div class="ID_block_position">
+            <div class="ID_block">
+                <form action="profile" method="post">
+                <div class="ID_title" id="login_title">
+                    <span>Connexion</span>
+                </div>
+
+                <div class="input_block">
+                    <input type="text" name="username" id="user" class="input_line" required>
+                    <label for="user" class="name_line">Nom d'utilisateur</label>
+                    <i class="fa-regular fa-user icon"></i>
+                </div>
+
+                <div class="input_block">
+                    <input type="password" name="password" id="pass" class="input_line" required>
+                    <label for="pass" class="name_line">Mot de passe</label>
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
+
+                <!-- Afficher le message d'erreur ici -->
+                <% if (errorMessage) { %>
+                    <div style="color: red; font-size: 14px; margin-top: 10px;">
+                        <%= errorMessage %>
+                    </div>
+                <% } %>
+
+                <div class="remember">
+                    <div class="rememeber-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                    </div>
+
+                    <div class="input_block">
+                        <!-- <input type="submit" class="submit_button" value="Connexion"> -->
+                        <button type="submit"name="submit" class="submit_button" href="profile">Connexion</button>
+                    </div>
+                </div>
+            </form>
+                <div class="sign">
+                    <span>Pas encore de compte ? <a class="little_button" href="identification">Créer un compte</a></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

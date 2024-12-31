@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Profile</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="base" id="base">
+            <nav class="barrenav">
+                <img src="/photos/logo_site.png" alt="logo" id="barrelogo">
+                <ul class="barrelien">      
+                        <li><a href="acceuil" method="get">acceuil</a></li>
+                        <li><a href="rdv" method="get">rendez-vous</a></li>  
+                        <% if (session.username) { %>
+                            <li><a href="/logout" class="logout-button">Déconnexion</a></li>
+                        <% } %>   
+                </ul>
+            </nav>
+            <div class="profile-user-name" id="user_name">
+                <img src="/photos/Fond_Profile.png" alt="flo_chat1" class="image_arondie">
+                <h1><%= user %></h1>
+            </div>
+            <!--<div class="profile-user-information" id="user_info">
+                <div class="left-text"><h3>Nom Complet</h3></div>
+                <div class="right-text"><h3>nom.complet@gmail.com</h3></div>
+            </div>//-->
+            <div class="profile-user-compagnie" id="user_name">
+                <h2>​List de vos animaux de compagnie:​</h2>
+                <div class="profile-user-compagnie-button-grid">
+                    <% animals.forEach(function(animal, index) { %>
+                        <a href="profile_compagnion-<%= index+1 %>" class="button-item">
+                            <img src="/photos/Dog_cat.jpg" alt="Icone 1" class="button-icon">
+                            <span class="button-text"><td><%= animal.name %></td></span>
+                        </a>
+                    <% }); %>
+                </div>
+                <div class="button-ajouter-container">
+                    <a href="profile_ajout_compagnion" class="button-ajouter">
+                        <span class="button-text" method="get">Ajouter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="footer">      
+              <li><a href="#header">Acceuil</a></li>
+              <li><a href="#propos">À Propos</a></li>  
+              <li><a href="#service_prop">Services Proposés</a></li>  
+            </ul>
+            <p>Droits d'auteur © 2024 Tous droits réservés - Dr Florence Didier - Médecin Vétérinaire</p>
+          </footer>
+    </div>
+    </body>
+</html>
